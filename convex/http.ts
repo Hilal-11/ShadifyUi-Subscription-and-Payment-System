@@ -4,7 +4,8 @@ import { Webhook } from "svix";
 import { WebhookEvent } from "@clerk/nextjs/server";
 import { api } from "./_generated/api";
 import stripe from "../src/lib/stripe";
-import resend from "../src/lib/resend";
+// import resend from "../src/lib/resend";
+import { Resend } from "resend";
 import WelcomeEmail from "../src/emails/WelcomeEmail";
 
 const http = httpRouter();
@@ -62,6 +63,18 @@ const clerkWebhook = httpAction(async (ctx, request) => {
 				clerkId: id,
 				stripeCustomerId: customer.id,
 			});
+
+//  TESTING PURPOSE 
+
+
+		const resend = new Resend(process.env.RESEND_API_KEY);
+
+
+
+
+
+
+
 
 			if (process.env.NODE_ENV === "development") {
 				await resend.emails.send({
