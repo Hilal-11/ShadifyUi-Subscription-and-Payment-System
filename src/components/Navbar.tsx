@@ -7,7 +7,7 @@ const Navbar = () => {
 	return (
 		<nav className='flex justify-between items-center py-4 px-6 bg-background border-b'>
 			<Link href={"/"} className='text-xl font-extrabold text-primary flex items-center gap-2'>
-				ShadifyUI <GraduationCap className='size-6' />
+				MasterClass <GraduationCap className='size-6' />
 			</Link>
 
 			<div className='flex items-center space-x-1 sm:space-x-4'>
@@ -48,7 +48,7 @@ const Navbar = () => {
 					</SignOutButton>
 				</SignedIn>
 
-				{/* <SignedOut>
+				<SignedOut>
 					<SignInButton mode='modal'>
 						<Button variant='outline' size='sm'>
 							Log in
@@ -60,10 +60,7 @@ const Navbar = () => {
 					<SignUpButton mode='modal'>
 						<Button size={"sm"}>Sign Up</Button>
 					</SignUpButton>
-				</SignedOut> */}
-                <Link href="/signup">Signup</Link>
-                <Link href="/login">Login</Link>
-
+				</SignedOut>
 			</div>
 		</nav>
 	);
