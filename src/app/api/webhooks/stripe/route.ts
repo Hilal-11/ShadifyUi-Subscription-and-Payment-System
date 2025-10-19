@@ -20,7 +20,7 @@ export async function POST(req: Request) {
 	} catch (err: any) {
 		console.log(`Webhook signature verification failed.`, err.message);
 		return new Response("Webhook signature verification failed.", { status: 400 });
-	}
+	}https://typescript-eslint.io/rules/no-explicit-any
 
 	try {
 		switch (event.type) {
